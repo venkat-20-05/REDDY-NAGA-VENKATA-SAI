@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="j.css">
+</head>
+<style>
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-image: url(C:\Users\DELL\OneDrive\Pictures\summer.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body style="color:black">
+    <div class="container">
+        <h2 style="text-align: center;padding: 15px ;color:black">REGISTRATION FORM</h2>
+        <link rel="stylesheet" href="shyam.css">
+      <form class="label" onsubmit="return validateForm()">
+  <label>Name</label><br>
+  <input type="text" id="name" placeholder="Enter Your Name"><br>
+  <span class="error" id="nameError" style="color:red"></span><br><br>
+  <label>Email</label><br>
+  <input type="email" id="email" placeholder="Enter Your Email"><br>
+  <span class="error" id="emailError" style="color:red"></span><br><br>
+  <label>Password</label><br>
+  <input type="password" id="password" placeholder="Enter Your Password"><br>
+  <span class="error" id="passwordError" style="color:red"></span><br><br>
+  <label>Confirm Password</label><br>
+  <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+  <span class="error" id="confirmPasswordError" style="color:red"></span><br><br>
+  <label>Phone</label><br>
+  <input type="number" id="phone" placeholder="Enter Your Number"><br>
+  <span class="error" id="phoneError" style="color:red"></span><br><br>
+  <button type="submit">Submit</button>
+  </form>
+  <script>
+function validateForm() {
+    let isValid = true;
+    document.querySelectorAll(".error").forEach(e => e.innerText = "");
+    let name = document.getElementById("name").value.trim();
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required";
+        isValid = false;
+    }
+    let email = document.getElementById("email").value.trim();
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        document.getElementById("emailError").innerText = "Enter a valid email";
+        isValid = false;
+    }
+    let password = document.getElementById("password").value;
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+        isValid = false;
+    }
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    if (confirmPassword !== password || confirmPassword === "") {
+        document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+        isValid = false;
+    }
+    let phone = document.getElementById("phone").value.trim();
+    let phonePattern = /^[0-9]{10}$/;
+    if (!phone.match(phonePattern)) {
+        document.getElementById("phoneError").innerText = "Enter 10 digit phone number";
+        isValid = false;
+    }
+    if (isValid) {
+        alert("Registration successfully");
+    }
+    return isValid;
+}
+</script>
+</body>
+</html>
