@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price AI Vision</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color:black;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .header .auth-buttons a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+            background-color:blue;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .search-section {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            padding: 40px 5%;
+        }
+
+        .search-container {
+            width: 60%;
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .search-container input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px 20px;
+            outline: none;
+        }
+
+        .search-container .search-icon {
+            background-color:red;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 20px 5%;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h3 {
+            margin: 10px 0 5px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card-content .price {
+            font-size: 16px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .hospital-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .hospital-card h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .hospital-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hospital-card li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-section h4 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+                <div class="logo" style="color:white">Price AI Vision</div>
+        <div class="nav-links">
+            <a href="#" style="color:white">Become a vendor</a>
+            <a href="#" style="color:white">Compare</a>
+            <a href="#" style="color:white">Services</a>
+            <a href="#" style="color:white">📍Get Location</a>
+        </div>
+        <div class="auth-buttons" style="color:black">
+            <a href="#" style="color:white">Login / Signup</a>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" placeholder="Enter Hospital Name...">
+            <div class="search-icon">🔍</div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <h2 class="section-title"></h2>
+        <div class="grid-container">
+            <div class="card" >
+                <img src="D:\cardiology.jpg" alt="Cardiology">
+                <div class="card-content">
+                    <h3 style="color:red">Cardiology</h3>
+                    <div class="price">₹55,000</div>
+                    <div class="price">₹50,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\neurology.jpg" alt="Neurology">
+                <div class="card-content">
+                    <h3 style="color:red">Neurology</h3>
+                    <div class="price">₹55,000</div>
+                    <div class="price">₹41,100</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\oncology.jpg" alt="Oncology">
+                <div class="card-content">
+                    <h3 style="color:red">Oncology</h3>
+                    <div class="price">₹75,000</div>
+                    <div class="price">₹71,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\orthopedics.jpg" alt="Orthopedics">
+                <div class="card-content">
+                    <h3 style="color:red">Orthopedics</h3>
+                    <div class="price">₹45,000</div>
+                    <div class="price">₹40,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\cardiology.jpg" alt="Cardiology">
+                <div class="card-content">
+                    <h3 style="color:red">Cardiology</h3>
+                    <div class="price">₹59,000</div>
+                    <div class="price">₹51,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\neurology.jpg" alt="Neurology">
+                <div class="card-content">
+                    <h3 style="color:red">Neurology</h3>
+                    <div class="price">₹59,000</div>
+                    <div class="price">₹57,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\oncology.jpg" alt="Oncology">
+                <div class="card-content">
+                    <h3 style="color:red">Oncology</h3>
+                    <div class="price">₹77,000</div>
+                    <div class="price">₹74,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\orthopedics.jpg" alt="Orthopedics">
+                <div class="card-content">
+                    <h3 style="color:red">Orthopedics</h3>
+                    <div class="price">₹55,000</div>
+                    <div class="price">₹54,000</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Recommended Services</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="D:\cardiology.jpg" alt="Cardiology">
+                <div class="card-content">
+                    <h3 style="color:red">Cardiology</h3>
+                    <p>Code: SC1212</p>
+                    <div class="price">₹53,500</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\neurology.jpg" alt="Neurology">
+                <div class="card-content">
+                    <h3 style="color:red">Neurology</h3>
+                    <p>Code: SC1272</p>
+                    <div class="price">₹43,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\oncology.jpg" alt="Oncology">
+                <div class="card-content">
+                    <h3 style="color:red">Oncology</h3>
+                    <p>Code: SC1282</p>
+                    <div class="price">₹65,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\orthopedics.jpg" alt="Orthopedics">
+                <div class="card-content">
+                    <h3 style="color:red">Orthopedics</h3>
+                    <p>Code: SC1292</p>
+                    <div class="price">₹47,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\gastro.jpg" alt="Gastroenterology">
+                <div class="card-content">
+                    <h3 style="color:red">Gastroenterology</h3>
+                    <p>Code: SC1302</p>
+                    <div class="price">₹66,000</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="D:\nephrology.jpg" alt="Nephrology">
+                <div class="card-content">
+                    <h3 style="color:red">Nephrology</h3>
+                    <p>Code: SC1312</p>
+                    <div class="price">₹63,000</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Most Popular Hospitals</h2>
+        <div class="grid-container" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="hospital-card">
+                <h3 style="color:blue">Alpha Hospital</h3>
+                <ul>
+                    <li>Cardiology<span style="color:green">₹55,000</span></li>
+                    <li>Neurology<span style="color:green">₹43,000</span></li>
+                    <li>Orthopedics<span style="color:green">₹51,900</span></li>
+                    <li>Nephrology<span style="color:green">₹65,000</span></li>
+                    <li>Endocrinology<span style="color:green">₹67,000</span></li>
+                    <li>Pulmonology<span style="color:green">₹53,000</span></li>
+                </ul>
+                            </div>
+            <div class="hospital-card">
+                <h3 style="color:blue">Sai Sanjeevani Multi-specialty Hospital</h3>
+                <ul>
+                    <li>Cardiology<span style="color:green">₹50,000</span></li>
+                    <li>Neurology<span style="color:green">₹32,000</span></li>
+                    <li>Orthopedics<span style="color:green">₹46,000</span></li>
+                    <li>Nephrology<span style="color:green">₹64,000</span></li>
+                    <li>Endocrinology<span style="color:green">₹33,000</span></li>
+                    <li>Pulmonology<span style="color:green">₹81,000</span></li>
+                </ul>
+                            </div>
+            <div class="hospital-card">
+                <h3 style="color:blue">Prasad Hospitals</h3>
+                <ul>
+                    <li>Cardiology<span style="color:green">₹58,000</span></li>
+                    <li>Neurology<span style="color:green">₹43,000</span></li>
+                    <li>Orthopedics<span style="color:green">₹52,000</span></li>
+                    <li>Nephrology<span style="color:green">₹58,000</span></li>
+                    <li>Urology<span style="color:green">₹68,000</span></li>
+                    <li>Pulmonology<span style="color:green">₹59,000</span></li>
+                </ul>
+                            </div>
+<div class="hospital-card">
+                <h3 style="color:blue">Sai Sudha Hospital</h3>
+                <ul>
+                    <li>Cardiology<span style="color:green">₹58,000</span></li>
+                    <li>Neurology<span style="color:green">₹43,000</span></li>
+                    <li>Orthopedics<span style="color:green">₹52,000</span></li>
+                    <li>Nephrology<span style="color:green">₹58,000</span></li>
+                    <li>Urology<span style="color:green">₹68,000</span></li>
+                    <li>Pulmonology<span style="color:green">₹59,000</span></li>
+                </ul>
+                            </div>
+<div class="hospital-card">
+                <h3 style="color:blue">Medicover Hospital</h3>
+                <ul>
+                    <li>Cardiology<span style="color:green">₹58,000</span></li>
+                    <li>Neurology<span style="color:green">₹43,000</span></li>
+                    <li>Orthopedics<span style="color:green">₹52,000</span></li>
+                    <li>Nephrology<span style="color:green">₹58,000</span></li>
+                    <li>Urology<span style="color:green">₹68,000</span></li>
+                    <li>Pulmonology<span style="color:green">₹59,000</span></li>
+                </ul>
+                            </div>
+
+
+        </div>
+    </div>
+    
+    <div style="text-align: center; padding: 50px 0; background-color: #f0f0f0;">
+        <h2>Price AI Vision Jatayu4</h2>
+        <div style="margin-top: 20px;">
+            <input type="email" placeholder="Enter email" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 300px;">
+            <button style="padding: 10px 20px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">Subscribe</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Contact Details</h4>
+            <ul>
+                <li>👤 Venkat</li>
+                <li>📞 8919332517</li>
+                <li>🏠 Amrita Sai Institute Of Science And Technology</li>
+                <li>📍 Paritala,AP - 521180</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>About us</h4>
+            <ul>
+                <li>Privacy & policy</li>
+                <li>Terms & conditions</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
